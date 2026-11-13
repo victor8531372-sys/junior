@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10251d">
+<title>Junior — 10 anos | Convite especial</title>
+<style>
+:root{--green:#a7f432;--dark:#10251d;--cream:#fff9e9;--orange:#ff8b35}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0b1712;color:var(--cream);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.page{max-width:920px;margin:auto;padding:22px}
+.hero{position:relative;overflow:hidden;min-height:650px;border:1px solid #ffffff24;border-radius:30px;padding:34px 28px;background:radial-gradient(circle at 80% 15%,#3b6b31 0,transparent 28%),linear-gradient(145deg,#183d2b,#0d2018 70%);box-shadow:0 24px 80px #0008}
+.hero:before{content:"";position:absolute;inset:auto -10% -80px;height:230px;background:repeating-linear-gradient(115deg,#234c2b 0 26px,#1b3b24 26px 52px);transform:skewY(-5deg);opacity:.9}
+.topline{display:flex;justify-content:space-between;gap:12px;align-items:center;position:relative;z-index:1}
+.pill{display:inline-block;border:1px solid #c8ff7b88;background:#a7f43218;color:#d9ffad;border-radius:99px;padding:9px 14px;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.stars{color:var(--green);letter-spacing:.3em}
+.intro{position:relative;z-index:1;text-align:center;padding:58px 10px 24px}
+.kicker{color:#c7f78c;font-weight:900;letter-spacing:.22em;text-transform:uppercase;font-size:.8rem}
+h1{font-size:clamp(4rem,13vw,8.2rem);line-height:.85;letter-spacing:-.075em;margin:18px 0 10px;color:#fff;text-shadow:0 7px 0 #34552c,0 12px 30px #0008}
+.age{font-size:clamp(1.5rem,5vw,2.5rem);font-weight:1000;color:var(--green);letter-spacing:.08em}
+.lead{max-width:600px;margin:20px auto 0;font-size:1.12rem;line-height:1.6;color:#edf7e6}
+.art{position:relative;z-index:1;display:flex;justify-content:center;align-items:center;gap:clamp(12px,5vw,44px);margin:28px auto 0}
+.art span{display:grid;place-items:center;width:clamp(82px,19vw,132px);aspect-ratio:1;border-radius:28px;background:#ffffff12;border:1px solid #ffffff24;font-size:clamp(3rem,9vw,5.4rem);transform:rotate(-5deg)}
+.art span:nth-child(2){transform:translateY(-12px) rotate(5deg);background:#a7f4321c}
+.art span:nth-child(3){transform:rotate(6deg)}
+.stadium{position:relative;z-index:1;margin:26px auto 0;max-width:580px;border:1px solid #c8ff7b55;border-radius:18px;padding:14px 18px;background:#06140e99;text-align:center}
+.stadium strong{color:var(--green)}
+.section{margin:22px 0;border:1px solid #ffffff20;border-radius:26px;padding:28px;background:#14251d}
+.section h2{font-size:1.65rem;margin:0 0 8px}
+.muted{color:#b8c9bb;line-height:1.55;margin:0 0 22px}
+form{display:grid;gap:16px}
+label{display:grid;gap:8px;font-weight:750;font-size:.95rem}
+input,select{width:100%;border:1px solid #ffffff30;border-radius:13px;background:#0b1912;color:white;padding:15px;font:inherit;outline:none}
+input:focus,select:focus{border-color:var(--green);box-shadow:0 0 0 3px #a7f43222}
+button,.maplink{display:inline-flex;justify-content:center;align-items:center;gap:10px;border:0;border-radius:14px;padding:16px 20px;background:var(--green);color:#142016;font-weight:950;font-size:1rem;text-decoration:none;cursor:pointer;transition:transform .2s,filter .2s}
+button:hover,.maplink:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.small{font-size:.82rem;color:#9fb2a4;line-height:1.5}
+.location{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.location p{margin:6px 0 0;color:#b8c9bb}
+.footer{text-align:center;color:#8da394;padding:20px 10px 34px;font-size:.86rem}
+.dino{font-size:2rem}
+@keyframes dinoBounce{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-18px) rotate(4deg)}}
+@keyframes dinoWiggle{0%,100%{transform:rotate(5deg) translateY(0)}25%{transform:rotate(-7deg) translateY(-7px)}50%{transform:rotate(7deg) translateY(-12px)}75%{transform:rotate(-3deg) translateY(-5px)}}
+@keyframes ballRoll{0%,100%{transform:rotate(0) translateY(0)}50%{transform:rotate(180deg) translateY(-9px)}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 #a7f43200}50%{box-shadow:0 0 28px #a7f43255}}
+.art span:nth-child(1){animation:ballRoll 3.2s ease-in-out infinite}
+.art span:nth-child(2){animation:dinoBounce 2.1s ease-in-out infinite,glow 2.8s ease-in-out infinite}
+.art span:nth-child(3){animation:dinoWiggle 2.7s ease-in-out infinite}
+
+.countdown{position:relative;z-index:1;max-width:580px;margin:18px auto 0;padding:16px;border:1px solid #c8ff7b66;border-radius:18px;background:#06140ecc;text-align:center}
+.countdown h2{font-size:1rem;margin:0 0 12px;color:#d9ffad;letter-spacing:.08em;text-transform:uppercase}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.count-unit{padding:10px 5px;border-radius:12px;background:#ffffff10;border:1px solid #ffffff20}
+.count-unit strong{display:block;color:var(--green);font-size:clamp(1.35rem,5vw,2rem);font-variant-numeric:tabular-nums}
+.count-unit span{font-size:.7rem;color:#c5d5c8;text-transform:uppercase;letter-spacing:.08em}
+.invite-code{display:inline-flex;align-items:center;gap:10px;margin-top:14px;padding:10px 15px;border:1px dashed #c8ff7b99;border-radius:12px;background:#a7f43212;color:#e8ffd0;font-weight:900;letter-spacing:.12em}
+.invite-code button{padding:8px 11px;font-size:.8rem;border-radius:9px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+@media(max-width:560px){.page{padding:12px}.hero{padding:22px 16px;min-height:590px;border-radius:22px}.intro{padding-top:48px}.section{padding:22px 18px}.topline{align-items:flex-start}.stars{font-size:.8rem}}
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="hero">
+    <div class="topline"><span class="pill">★ Convite especial</span><span class="stars">⚽ ✦ 🦖</span></div>
+    <div class="intro">
+      <div class="kicker">Atenção, equipe!</div>
+      <h1>JUNIOR</h1>
+      <div class="age">10 ANOS!</div>
+      <p class="lead">Prepare-se para entrar em campo numa aventura jurássica! Vai ter futebol, dinossauros gigantes e muita diversão. Você está convocado para essa missão!</p>
+      <div class="art" aria-label="Futebol e dinossauros"><span>⚽</span><span title="Dinossauro animado">🦖</span><span>🏆</span></div>
+      <div class="invite-code">📅 DATA DA FESTA: 25/12/2026 · 🕔 ÀS 17H (5 DA TARDE)</div>
+      <div class="countdown" aria-live="polite">
+        <h2>⏳ Contagem regressiva para a festa</h2>
+        <div class="count-grid">
+          <div class="count-unit"><strong id="days">--</strong><span>Dias</span></div>
+          <div class="count-unit"><strong id="hours">--</strong><span>Horas</span></div>
+          <div class="count-unit"><strong id="minutes">--</strong><span>Minutos</span></div>
+          <div class="count-unit"><strong id="seconds">--</strong><span>Segundos</span></div>
+        </div>
+        <p id="countdownMessage" class="small" style="margin:10px 0 0">Falta pouco para a aventura!</p>
+      </div>
+      <div class="stadium">🏟️ <strong>Uma festa de outro mundo!</strong> 🦕</div>
+    </div>
+  </section>
+
+  <section class="section" id="gameSection">
+    <h2>🏃 Mini game: fuja do dinossauro!</h2>
+    <p class="muted">Ajude o jogador a escapar do T-Rex! Pule os obstáculos e tente fazer muitos pontos.</p>
+    <div style="position:relative;max-width:760px;margin:auto">
+      <canvas id="game" width="760" height="230" aria-label="Jogo de corrida: jogador de futebol fugindo de um dinossauro" style="display:block;width:100%;border:2px solid #a7f43288;border-radius:16px;background:linear-gradient(#9bd7ef 0 68%,#427d37 68%);touch-action:manipulation"></canvas>
+      <div style="display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap">
+        <div style="display:flex;gap:14px;flex-wrap:wrap"><strong id="score" style="color:#c7f78c">Pontos: 0</strong><strong id="level" style="color:#ffd27a">Nível: 1</strong></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" id="startGame">▶ Começar / Reiniciar</button><button type="button" id="jumpGame">⬆ PULAR</button></div>
+      </div>
+      <p class="small" style="margin:10px 0 0">Use ESPAÇO, ↑ ou toque em PULAR para saltar os dinossauros no chão. Cuidado: no nível 10, os pterossauros voam alto — fique no chão e NÃO PULE quando eles aparecerem!</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Você vai entrar nessa aventura?</h2>
+    <p class="muted">Confirme sua presença preenchendo os dados abaixo.</p>
+    <form id="rsvp">
+      <label>Nome do convidado
+        <input id="guest" name="guest" placeholder="Digite seu nome completo" required>
+      </label>
+      <label>Código do convidado
+        <input id="guestCode" name="guestCode" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="1" autocomplete="off" placeholder="Digite o código recebido" required>
+      </label>
+      <label>Quantidade de participantes
+        <select id="count" name="count">
+          <option value="1">1 pessoa</option><option value="2">2 pessoas</option>
+          <option value="3">3 pessoas</option><option value="4">4 pessoas</option>
+          <option value="5">5 pessoas</option><option value="6">6 pessoas</option>
+        </select>
+      </label>
+      <button type="submit">➤ Confirmar pelo WhatsApp</button>
+      <div class="small">Ao confirmar, o WhatsApp abrirá com a mensagem pronta para você enviar.</div>
+    </form>
+  </section>
+
+  <section class="section location">
+    <div><div class="pill">📍 Local da missão</div><h2 style="margin-top:14px">Bairro dos Leimoeiros</h2><p>Esperamos você para essa comemoração gigante!</p></div>
+    <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Bairro+dos+Leimoeiros" target="_blank" rel="noopener">Ver localização ↗</a>
+  </section>
+  <div class="footer">⚽ JUNIOR · 10 anos · 25/12/2026<br>Feito para uma comemoração gigante! 🦖</div>
+</main>
+<script>
+document.getElementById('rsvp').addEventListener('submit', function(e){
+  e.preventDefault();
+  const guest = document.getElementById('guest').value.trim();
+  const count = document.getElementById('count').value;
+  const code = document.getElementById('guestCode').value.trim();
+  if (code !== '7') { alert('Código do convidado incorreto. Confira o código que você recebeu!'); return; }
+  const message = `Olá! Sou ${guest} e quero confirmar minha presença no aniversário de 10 anos do Junior, dia 25/12/2026. Seremos ${count} ${count === '1' ? 'pessoa' : 'pessoas'}. ⚽🦖`;
+  window.open('https://wa.me/?text=' + encodeURIComponent(message), '_blank', 'noopener');
+});
+
+
+function updateCountdown(){
+  const target = new Date(2026, 11, 25, 17, 0, 0);
+  const remaining = target.getTime() - Date.now();
+  const msg = document.getElementById('countdownMessage');
+  if(remaining <= 0){
+    ['days','hours','minutes','seconds'].forEach(id => document.getElementById(id).textContent = '00');
+    msg.textContent = '🎉 Chegou o dia da festa! Feliz aniversário, Junior!';
+    return;
+  }
+  const total = Math.floor(remaining / 1000);
+  document.getElementById('days').textContent = String(Math.floor(total / 86400)).padStart(2,'0');
+  document.getElementById('hours').textContent = String(Math.floor((total % 86400) / 3600)).padStart(2,'0');
+  document.getElementById('minutes').textContent = String(Math.floor((total % 3600) / 60)).padStart(2,'0');
+  document.getElementById('seconds').textContent = String(total % 60).padStart(2,'0');
+  msg.textContent = 'Prepare a chuteira: a aventura está chegando!';
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+const scoreEl = document.getElementById('score');
+const levelEl = document.getElementById('level');
+let player, obstacles, score, speed, running, over, frame, raf, spawnTimer, level, bigBangTriggered=false, bigBangFrame=0;
+function resetGame(){
+  player={x:82,y:160,vy:0,w:34,h:52,onGround:true};
+  obstacles=[];score=0;speed=5;frame=0;spawnTimer=0;level=1;bigBangTriggered=false;bigBangFrame=0;
+  running=true;over=false;
+  scoreEl.textContent='Pontos: 0';levelEl.textContent='Nível: 1';
+  if(raf)cancelAnimationFrame(raf);
+  loop();
+}
+function jump(){
+  if(!running){if(over)resetGame();return;}
+  if(player.onGround){player.vy=-12.5;player.onGround=false;}
+}
+function drawPlayer(){
+  ctx.font='38px sans-serif';ctx.fillText('⚽',player.x+2,player.y+15);
+  ctx.font='32px sans-serif';ctx.fillText('🏃',player.x,player.y+47);
+}
+function loop(){
+  if(!running)return;
+  ctx.clearRect(0,0,760,230);
+  ctx.fillStyle='#9bd7ef';ctx.fillRect(0,0,760,156);
+  ctx.fillStyle='#427d37';ctx.fillRect(0,156,760,74);
+  ctx.fillStyle='#ffffffaa';ctx.beginPath();ctx.arc(630,38,22,0,Math.PI*2);ctx.fill();
+  ctx.strokeStyle='#eaffdc';ctx.lineWidth=3;ctx.setLineDash([18,14]);
+  ctx.beginPath();ctx.moveTo(0,205);ctx.lineTo(760,205);ctx.stroke();ctx.setLineDash([]);
+
+  level=1+Math.floor(score/250);
+
+  // No nível 15, um Big Bang cai na tela e reinicia a partida do zero.
+  if(level>=15 && !bigBangTriggered){
+    bigBangTriggered=true;
+    bigBangFrame=0;
+    obstacles=[];
+  }
+  if(bigBangTriggered){
+    bigBangFrame++;
+    ctx.fillStyle='#080d28';ctx.fillRect(0,0,760,230);
+    ctx.textAlign='center';
+    ctx.fillStyle='#fff';ctx.font='bold 28px system-ui';
+    ctx.fillText('NÍVEL 15: O BIG BANG!',380,38);
+    if(bigBangFrame<65){
+      const meteorY=-55+bigBangFrame*3.2;
+      ctx.save();
+      ctx.translate(380,meteorY);
+      ctx.rotate(Math.PI/4);
+      ctx.font='76px sans-serif';ctx.fillText('☄️',0,0);
+      ctx.restore();
+      ctx.fillStyle='#ffb347';ctx.font='18px system-ui';
+      ctx.fillText('O BIG BANG ESTÁ CHEGANDO...',380,198);
+    }else{
+      const blastFrame=bigBangFrame-65;
+      const radius=Math.min(430,blastFrame*18);
+      ctx.beginPath();ctx.arc(380,125,radius,0,Math.PI*2);
+      ctx.fillStyle=blastFrame%2?'#fff3a6':'#ff9f43';ctx.fill();
+      ctx.fillStyle='#17204a';ctx.font='bold 30px system-ui';
+      ctx.fillText('💥 BIG BANG! 💥',380,112);
+      ctx.font='20px system-ui';ctx.fillText('Pontuação zerada! Começando de novo...',380,151);
+      if(bigBangFrame>=92){
+        resetGame();
+        return;
+      }
+    }
+    ctx.textAlign='left';
+    raf=requestAnimationFrame(loop);
+    return;
+  }
+
+  speed=Math.min(10.5,4.5+(level-1)*0.55);
+  const flyingUnlocked=level>=10;
+  const spawnInterval=Math.max(120,160-(level-1)*2);
+  levelEl.textContent='Nível: '+level+(flyingUnlocked?' · PTEROSSAUROS!':'');
+
+  player.vy+=0.62;player.y+=player.vy;
+  if(player.y>=160){player.y=160;player.vy=0;player.onGround=true;}
+
+  spawnTimer++;
+  if(spawnTimer>=spawnInterval){
+    const tall=level>=3&&Math.random()<Math.min(.45,.12+level*.035);
+    if(flyingUnlocked && Math.random()<.38){
+      // Pterossauro voa alto: o jogador deve ficar no chão e não pular. Liberado no nível 10.
+      obstacles.push({x:780,y:65,w:58,h:55,type:'🪽🦖',flying:true});
+    }else{
+      obstacles.push({x:780,y:156,w:tall?48:42,h:tall?54:47,type:tall?'🦕':'🦖',flying:false});
+    }
+    spawnTimer=0;
+    if(level>=5&&Math.random()<.22){
+      obstacles.push({x:1630,y:156,w:40,h:47,type:'🦖',flying:false});
+    }
+  }
+  obstacles.forEach(o=>{
+    o.x-=speed;
+    ctx.font=o.flying?'34px sans-serif':(o.h>50?'48px':'42px')+' sans-serif';
+    ctx.fillText(o.type,o.x,o.flying?o.y+31:202);
+  });
+  obstacles=obstacles.filter(o=>o.x>-65);
+  drawPlayer();
+
+  for(const o of obstacles){
+    const playerLeft=player.x+8, playerRight=player.x+29;
+    const playerTop=player.y+8, playerBottom=player.y+48;
+    const obstacleTop=o.y, obstacleBottom=o.y+o.h;
+    const overlapsX=playerRight>o.x+7&&playerLeft<o.x+o.w-5;
+    const overlapsY=playerBottom>obstacleTop&&playerTop<obstacleBottom;
+    if(overlapsX&&overlapsY){running=false;over=true;}
+  }
+  if(!over){
+    score++;
+    const points=Math.floor(score/5);
+    scoreEl.textContent='Pontos: '+points;
+    if(level===10 && Math.floor((score-1)/5)<250) {
+      // Aviso rápido quando a nova ameaça é liberada.
+      ctx.fillStyle='#102b20';ctx.fillRect(190,8,380,30);
+      ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 16px system-ui';
+      ctx.fillText('🪽 NÍVEL 10: PTEROSSAUROS! NÃO PULE! 🦖',380,29);
+      ctx.textAlign='left';
+    }
+  }
+  frame++;
+  if(over){
+    ctx.fillStyle='#07150fe8';ctx.fillRect(0,0,760,230);
+    ctx.textAlign='center';ctx.fillStyle='#fff';ctx.font='bold 32px system-ui';
+    ctx.fillText('O dinossauro te pegou!',380,92);
+    ctx.font='20px system-ui';ctx.fillText('Pontuação: '+Math.floor(score/5)+' · Nível '+level,380,130);
+    ctx.font='16px system-ui';ctx.fillText('Toque em Começar para tentar de novo',380,162);
+    ctx.textAlign='left';return;
+  }
+  raf=requestAnimationFrame(loop);
+}
+document.getElementById('startGame').addEventListener('click',resetGame);
+document.getElementById('jumpGame').addEventListener('click',jump);
+window.addEventListener('keydown',e=>{
+  if(e.code==='Space'||e.code==='ArrowUp'){
+    if(document.activeElement.tagName!=='INPUT'){e.preventDefault();jump();}
+  }
+});
+canvas.addEventListener('pointerdown',jump);
+resetGame();
+
+</script>
+</body>
+</html>
